@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import 'tailwindcss';
 
 @theme {
-  --color-accent: #2563eb;
-  --color-accent-light: #3b82f6;
-  --color-marked: #dcfce7;
-  --color-marked-border: #22c55e;
-  --color-bingo: #fbbf24;
+  /* Early 2000s Retro Palette */
+  --color-accent: #00d4ff;
+  --color-accent-light: #00f0ff;
+  --color-marked: #39ff14;
+  --color-marked-border: #00ff00;
+  --color-bingo: #ffff00;
+  --color-primary-dark: #1a0033;
+  --color-primary-light: #ff00ff;
+  --color-secondary: #ff6600;
+  --color-tertiary: #0099ff;
 }
 
 html,
@@ -16,6 +22,38 @@ body,
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'VT323', 'Courier New', monospace;
   -webkit-tap-highlight-color: transparent;
+  background: linear-gradient(135deg, #ff00ff 0%, #ff6600 50%, #ffff00 100%);
+  color: #000;
+}
+
+/* CSS custom properties for early 2000s skeuomorphic effects */
+:root {
+  --gradient-button: linear-gradient(135deg, #00d4ff 0%, #0099ff 50%, #ff00ff 100%);
+  --gradient-button-hover: linear-gradient(135deg, #00f0ff 0%, #00d4ff 50%, #ff33ff 100%);
+  --gradient-board-bg: linear-gradient(135deg, #1a0033 0%, #330066 50%, #ff00ff 100%);
+  --shadow-bevel-inset: inset 0 2px 0 rgba(255, 255, 255, 0.4), inset 0 -3px 0 rgba(0, 0, 0, 0.5);
+  --shadow-bevel-inset-pressed: inset 0 -2px 0 rgba(255, 255, 255, 0.3), inset 0 2px 0 rgba(0, 0, 0, 0.6);
+  --shadow-thick: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-heavy: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Retro text effects */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'VT323', 'Courier New', monospace;
+  font-weight: 700;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
+/* Link styling */
+a {
+  color: #0099ff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #ff00ff;
 }
