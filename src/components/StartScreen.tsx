@@ -9,7 +9,7 @@ export function StartScreen({ onStart }: StartScreenProps) {
         <h1 className="text-5xl font-bold text-white mb-2" style={{textShadow: '3px 3px 0px #000'}}>Bingo Mixer</h1>
         <p className="text-2xl font-bold text-white mb-8" style={{textShadow: '2px 2px 0px #000'}}>Find your people!</p>
         
-        <div className="bg-cyan-300 rounded-none p-6 shadow-lg border-4 border-cyan-600 mb-8" style={{boxShadow: 'inset 0 2px 0 rgba(255,255,255,0.5), inset 0 -3px 0 rgba(0,0,0,0.5), 0 4px 8px rgba(0,0,0,0.4)'}}>
+        <div className="bg-cyan-300 rounded-none p-6 shadow-lg border-4 border-cyan-600 mb-8" style={{ boxShadow: 'var(--shadow-bevel-inset), var(--shadow-thick)' }}>
           <h2 className="font-semibold text-black mb-3 text-lg">How to play</h2>
           <ul className="text-left text-black text-sm space-y-2 font-bold">
             <li>• Find people who match the questions</li>

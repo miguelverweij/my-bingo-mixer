@@ -23,12 +23,12 @@ export function BingoSquare({ square, isWinning, onClick }: BingoSquareProps) {
       onClick={onClick}
       disabled={square.isFreeSpace}
       className={`${baseClasses} ${stateClasses} ${freeSpaceClasses} cursor-pointer`}
-      style={square.isWinning ? {
-        boxShadow: '0 0 8px rgba(255, 255, 0, 0.8), inset 0 1px 0 rgba(255,255,255,0.4), inset 0 -2px 0 rgba(0,0,0,0.3)'
+      style={isWinning ? {
+        boxShadow: '0 0 8px rgba(255, 255, 0, 0.8), var(--shadow-bevel-inset)'
       } : square.isMarked ? {
-        boxShadow: '0 0 8px rgba(57, 255, 20, 0.6), inset 0 1px 0 rgba(255,255,255,0.3), inset 0 -2px 0 rgba(0,0,0,0.3)'
+        boxShadow: '0 0 8px rgba(57, 255, 20, 0.6), var(--shadow-bevel-inset)'
       } : {
-        boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.4), inset 0 -2px 0 rgba(0,0,0,0.3)'
+        boxShadow: 'var(--shadow-bevel-inset)'
       }}
       aria-pressed={square.isMarked}
       aria-label={square.isFreeSpace ? 'Free space' : square.text}
